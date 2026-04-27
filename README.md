@@ -1,4 +1,7 @@
-# Catalogo de Produtos - Spring Boot + PostgreSQL
+# Catálogo de Produtos - Spring Boot + PostgreSQL
+
+> Observação: o projeto foi enviado compactado em `catalogo.rar`.  
+> Este README descreve o funcionamento do projeto após a extração.
 
 Este projeto foi desenvolvido com:
 
@@ -8,9 +11,9 @@ Este projeto foi desenvolvido com:
 - PostgreSQL
 - Thymeleaf
 
-## 1. Pre-requisitos
+## 1. Pré-requisitos
 
-Antes de rodar, instale:
+Antes de executar, instale:
 
 - JDK 17
 - PostgreSQL (servidor ativo)
@@ -23,7 +26,7 @@ Abra o PostgreSQL (pgAdmin, DBeaver ou terminal SQL) e execute:
 CREATE DATABASE catalogo;
 ```
 
-Opcional: se quiser usar outro nome de banco, basta ajustar no `application.properties`.
+Opcional: se quiser usar outro nome de banco, ajuste no `application.properties`.
 
 ## 3. Configurar o `application.properties`
 
@@ -52,7 +55,7 @@ spring.jpa.properties.hibernate.format_sql=true
 ### O que ajustar nesse arquivo
 
 - `spring.datasource.url`: host, porta e nome do banco.
-- `spring.datasource.username`: usuario do PostgreSQL.
+- `spring.datasource.username`: usuário do PostgreSQL.
 - `spring.datasource.password`: senha do PostgreSQL.
 
 ## 4. Rodar o projeto
@@ -73,17 +76,17 @@ A aplicação sobe por padrão em:
 
 - `http://localhost:8080`
 
-## 5. Usuarios padrao criados automaticamente
+## 5. Usuários padrão criados automaticamente
 
-Na primeira execução, o projeto tenta criar os usuarios:
+Na primeira execução, o projeto tenta criar os usuários:
 
 - `usuario` / `usuario@123` (perfil `ROLE_USER`)
 - `adm` / `adm@123` (perfil `ROLE_ADMIN`)
 
-Observacao importante:
+Observação importante:
 
-- Se já existirem usuarios antigos (exemplo: `joao` e `arthur`) no banco, eles nao sao apagados automaticamente.
-- O projeto apenas adiciona os novos usuarios se ainda nao existirem.
+- Se já existirem usuários antigos (exemplo: `joao` e `arthur`) no banco, eles não são apagados automaticamente.
+- O projeto apenas adiciona os novos usuários se ainda não existirem.
 
 ## 6. Erros comuns e como resolver
 
@@ -104,6 +107,6 @@ Você pode mudar a porta no `application.properties`:
 server.port=8081
 ```
 
-## 7. Observacao para avaliacao/professor
+## 7. Observação para avaliação/professor
 
-Este projeto usa `spring.jpa.hibernate.ddl-auto=update`, portanto as tabelas sao criadas/atualizadas automaticamente conforme as entidades Java, sem necessidade de script manual para estrutura inicial.
+Este projeto usa `spring.jpa.hibernate.ddl-auto=update`, portanto as tabelas são criadas/atualizadas automaticamente conforme as entidades Java, sem necessidade de script manual para estrutura inicial.
